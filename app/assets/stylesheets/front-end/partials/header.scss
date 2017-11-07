@@ -1,0 +1,76 @@
+$exo: 'Exo 2', sans-serif;
+
+.header{
+  background-color: white;
+  width: 100%;
+}
+
+#top-nav {
+  text-align: right;
+  font-family: $exo;
+  font-weight: 200;
+  padding-top: 45px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    list-style: none;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
+    text-align: right;
+  }
+
+  a:hover {
+    color: orange;
+  }
+}
+
+#company-logo {
+  font-size: 3em;
+  text-align: center;
+  font-family: $exo;
+  font-weight: 200;
+}
+
+#main-nav {
+  height: 43px;
+  text-align: center;
+  font-family: $exo;
+  font-weight: 200;
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    list-style: none;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    color: #000;
+    text-align: left;
+  }
+
+  a:hover {
+    color: orange;
+  }
+}

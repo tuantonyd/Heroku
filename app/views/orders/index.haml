@@ -1,0 +1,17 @@
+.spacer
+.container
+  .row.card.table-card
+    %table.table
+      %thead
+        %tr
+          %th Status
+          %th Total
+          %th Notes
+          %th
+      %tbody
+        - @orders.each do |order|
+          %tr
+            %td= order.order_status.status
+            %td= number_to_currency(order.total)
+            %td= order.notes
+            %td= link_to 'Review Order', order

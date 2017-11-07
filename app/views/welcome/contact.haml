@@ -1,0 +1,23 @@
+.container-fluid
+  .row
+    =image_tag 'contactheader', class: 'jumbo-image'
+.container
+  #details-area
+    #company-name Contact Us  
+  .card.table-card.col-md-6.ml-auto.mr-auto
+    .row
+      .col-6
+        .form-group
+          %label{:for => "contact_name"} Name:
+          %input.form-control{:name => "contact_name", :size => "60", :type => "text"}
+      .col-6
+        .form-group
+          %label{:for => "contact_email"} Email:
+          %input.form-control{:email => "contact_email", :size => "60", :type => "text"}
+    .row
+      .col-12
+        .form-group
+          %lable{:for => 'message'} Message:
+          %textarea.form-control{:message => "message"}
+      .col-12
+        %button.btn.btn-primary.pull-right{:type => "submit"} Send

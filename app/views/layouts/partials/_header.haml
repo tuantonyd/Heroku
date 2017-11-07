@@ -1,0 +1,27 @@
+.container
+  #top-nav
+    - if customer_signed_in?
+      = link_to('Logout', destroy_customer_session_path, method: :delete)
+    - else
+      = link_to('Login', new_customer_session_path)
+    |
+    %a{:href => cart_path}
+      %i.fa.fa-shopping-cart
+      Cart
+.container
+  #company-logo
+    Oliver Heart
+.container
+  #main-nav
+    %ul
+      %li
+        = link_to 'Home', welcome_index_path
+      %li
+        = link_to 'About', welcome_about_path
+      %li
+        = link_to 'Shop', items_path
+      %li
+        = link_to 'Contact', welcome_contact_path
+      - if customer_signed_in?
+        %li
+          = link_to 'View Orders', orders_path

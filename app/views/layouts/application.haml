@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Oliver Heart | Gift Baskets & More
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+  %body
+    #main-wrapper
+      .header
+        = render 'layouts/partials/header'
+      .main
+        = yield
+      .spacer
+      .footer
+        = render 'layouts/partials/footer'
+    %script{:src => "https://js.stripe.com/v3/"}
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

@@ -1,0 +1,19 @@
+= hidden_field :item, :id , { value: @item.id, id: 'item' }
+.spacer
+.container
+  .row
+    .col-md-5.ml-auto.card.shop-card
+      = image_tag @item.images.first.file, class: 'item-image'
+      .row.ml-auto
+        - @item.images.each do |image|
+          .col-md-4
+            = image_tag image.file, class: 'img-responsive img-thumbnail', id: 'enlarged'
+
+    .col-md-1
+    .col-md-3.mr-auto.card.shop-card
+      %h2= @item.name
+      %h6= number_to_currency(@item.price)
+      %label Quantity:
+      %input#qty{:type => "number", :value => "1", class: 'form-control'}
+      %br
+      .button.btn.btn-primary#addToCart Add to Cart

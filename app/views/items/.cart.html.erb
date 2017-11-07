@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+  <tr>
+    <td>Name</td>
+    <td>Price</td>
+    <td>Quantity</td>
+  </tr>
+  </thead>
+
+<% @cart_items.each_with_index do |cart_item, index| %>
+    <tr>
+      <td><%=cart_item[:item].name%></td>
+      <td><%=cart_item[:item].price%></td>
+      <td><%=cart_item[:qty]%></td>
+      <td><a href="/cart/remove?cookieIndex=<%= cart_item[:item].id %>" >Remove from Cart</div></td>
+
+    </tr>
+<% end %>
+</table>
+<form>
+
+<%= link_to "Check Out", check_out_path %>

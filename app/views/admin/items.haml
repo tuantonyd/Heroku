@@ -1,0 +1,21 @@
+%table.table
+  %tr
+    %th
+      Name
+    %th
+      Price
+    %th
+      Availability
+    %th
+      Edit
+  %tr
+  - @items.each do |item|
+    %tr
+      %td
+        = item.name
+      %td
+        = item.price
+      %td
+        = item.available
+      %td
+        = link_to "Edit", "#{edit_item_path item}"

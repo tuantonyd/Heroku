@@ -1,0 +1,27 @@
+<%= form_with(model: item, local: true, id: "order-form", multipart: true) do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+    <div>
+      <%= form.label :description %>
+      <%= form.text_field :description %>
+    </div>
+    <div>
+      <%= form.label :price %>
+      <%= form.number_field :price %>
+    </div>
+    <div class="dropzone">
+      <%= form.label :image %>
+      <%= file_field_tag "images[]", type: :file, multiple: true %>
+    </div>
+    <% if current_customer.try(:admin?) %>
+    <%= form.label :availabilty %>
+    <%= form.check_box :available %>
+  <% end %>
+
+    <div>
+      <%= form.label :submit %>
+      <%= form.submit  %>
+    </div>
+<% end %>

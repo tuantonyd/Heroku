@@ -1,0 +1,10 @@
+.spacer
+.container
+  .row
+    - @items.each do |item|
+      = link_to item, class: 'card shop-card' do
+        = image_tag item.picture, class: 'item-image'
+        %p.card-text
+          = item.name
+        %p.card-text
+          #{number_to_currency(item.price)}

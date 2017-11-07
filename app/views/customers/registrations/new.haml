@@ -1,0 +1,19 @@
+.spacer
+.container
+  .row
+    .col-md-4.ml-auto.mr-auto.card.table-card
+      = simple_form_for resource, as: resource_name, url: registration_path(resource_name) do |f|
+        = f.input :first_name
+        = f.input :last_name
+        = f.input :address
+        = f.input :city
+        = f.input :state_id, :collection => State.all,:label_method => :state_name,:value_method => :id, :label => "State" ,:include_blank => false
+        = f.input :zip
+        = f.input :email
+        = f.input :phone, :input_html => {:class => "mask-phone", :type=>"text"}
+        = f.input :password
+        = f.input :password_confirmation
+        = f.button :submit, 'Create Account'
+  .row
+    .col-md-4.ml-auto.mr-auto#links
+      = render "customers/shared/links"

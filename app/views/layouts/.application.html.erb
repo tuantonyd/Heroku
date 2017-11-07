@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CapstonePrototype</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+  <div class="container" ><!-- group -->
+    <div class="row" id="ppu1977-3"><!-- column -->
+      <div class="clearfix colelem" id="pu1977-3"><!-- group -->
+        <div class="clearfix grpelem" id="u1977-3" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
+          <p>&nbsp;</p>
+        </div>
+        <%= link_to "Cart", cart_path, {class: "nonblock nontext transition clearfix grpelem", id:"u1983-4" } %>
+        <%= image_tag "u1984-4", class: "grpelem", id: "u1984-4", alt:"OLIVER HEART" %>
+      </div>
+      <%= image_tag "u1978-4", class: "colelem", id: "u1978-4", alt:"Gift Boxes" %>
+      <div class="clearfix colelem" id="pu1980-4"><!-- group -->
+        <%= link_to "Home", root_url, {id:"u1980-4", class:"nonblock nontext transition clearfix grpelem"}  %>
+        <%= link_to "Shop", items_url, {id:"u1981-4", class:"nonblock nontext transition clearfix grpelem"}  %>
+        <%= link_to "View My Orders", orders_url,{id:"u1982-4", class:"nonblock nontext transition clearfix grpelem"} %>
+      </div>
+    </div>
+    <%= yield %>
+  </div>
+  <div class="clearfix grpelem" id="pu1403-4"><!-- column -->
+    <a class="nonblock nontext transition clearfix colelem" id="u1403-4" href="contact.html" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content --><p>CONTACT</p></a>
+    <div class="browser_width colelem" id="u923-bw">
+      <div id="u923"><!-- group -->
+        <div class="clearfix" id="u923_align_to_page">
+          <div class="clearfix grpelem" id="u399-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
+            <p>Website Created By Xaas</p>
+            <p><%= link_to "Sign In", new_customer_session_path %></p>
+            <p><%= link_to "Sign Out", destroy_customer_session_path %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://js.stripe.com/v3/"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </body>
+</html>
